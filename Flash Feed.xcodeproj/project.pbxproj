@@ -56,15 +56,111 @@
 		E697C3AD23660FC6008F9FC2 /* Flash Feed */ = {
 			isa = PBXGroup;
 			children = (
+				E697C3CD2366103D008F9FC2 /* Model */,
+				E697C3CA2366102B008F9FC2 /* View */,
+				E697C3C923661026008F9FC2 /* ViewModel */,
+				E697C3C82366101F008F9FC2 /* ViewController */,
+				E697C3C723661018008F9FC2 /* Service */,
+				E697C3C623661013008F9FC2 /* Storyboard */,
+				E697C3C523661009008F9FC2 /* Resources */,
+				E697C3C323660FDB008F9FC2 /* Utilities */,
 				E697C3AE23660FC6008F9FC2 /* AppDelegate.swift */,
-				E697C3B023660FC6008F9FC2 /* ViewController.swift */,
-				E697C3B223660FC6008F9FC2 /* Main.storyboard */,
-				E697C3B823660FC8008F9FC2 /* Assets.xcassets */,
-				E697C3BA23660FC8008F9FC2 /* LaunchScreen.storyboard */,
 				E697C3BD23660FC8008F9FC2 /* Info.plist */,
-				E697C3B523660FC6008F9FC2 /* Flash_Feed.xcdatamodeld */,
 			);
 			path = "Flash Feed";
+			sourceTree = "<group>";
+		};
+		E697C3C323660FDB008F9FC2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E697C3C423660FE5008F9FC2 /* Private */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E697C3C423660FE5008F9FC2 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		E697C3C523661009008F9FC2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E697C3B823660FC8008F9FC2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E697C3C623661013008F9FC2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E697C3B223660FC6008F9FC2 /* Main.storyboard */,
+				E697C3BA23660FC8008F9FC2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E697C3C723661018008F9FC2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E697C3C82366101F008F9FC2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E697C3B023660FC6008F9FC2 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E697C3C923661026008F9FC2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E697C3CA2366102B008F9FC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E697C3CB2366102F008F9FC2 /* UI */,
+				E697C3CC23661035008F9FC2 /* XIB */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E697C3CB2366102F008F9FC2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E697C3CC23661035008F9FC2 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		E697C3CD2366103D008F9FC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E697C3CE2366104C008F9FC2 /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E697C3CE2366104C008F9FC2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E697C3B523660FC6008F9FC2 /* Flash_Feed.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GS4P234C83;
 				INFOPLIST_FILE = "Flash Feed/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GS4P234C83;
 				INFOPLIST_FILE = "Flash Feed/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

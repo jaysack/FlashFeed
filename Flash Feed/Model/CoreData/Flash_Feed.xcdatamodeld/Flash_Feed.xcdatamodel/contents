@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreSource" representedClassName="CoreSource" syncable="YES" codeGenerationType="class">
+        <attribute name="category" attributeType="String" syncable="YES"/>
+        <attribute name="country" attributeType="String" syncable="YES"/>
+        <attribute name="descr" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="language" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CoreSource" positionX="-63" positionY="-18" width="128" height="150"/>
+    </elements>
 </model>

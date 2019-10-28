@@ -37,10 +37,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_work_sign" translatesAutoresizingMaskIntoConstraints="NO" id="UA9-EH-tLT" customClass="JSImageView" customModule="Flash_Feed" customModuleProvider="target">
-                                <rect key="frame" x="5" y="26" width="365" height="177.5"/>
+                                <rect key="frame" x="5" y="29" width="365" height="174.5"/>
                             </imageView>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRI-m2-jZm" userLabel="Tint" customClass="JSView" customModule="Flash_Feed" customModuleProvider="target">
-                                <rect key="frame" x="5" y="26" width="365" height="177.5"/>
+                                <rect key="frame" x="5" y="29" width="365" height="174.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SoftBank is turning to its Sprint leaders to bail out WeWork—they'll need to do better this time" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-QH-e3c" userLabel="Article Title">
@@ -61,7 +61,7 @@
                             <constraint firstAttribute="bottom" secondItem="UA9-EH-tLT" secondAttribute="bottom" constant="5" id="1CY-Pn-NT8"/>
                             <constraint firstAttribute="trailing" secondItem="2Ry-pH-7xd" secondAttribute="trailing" constant="20" id="1YT-AW-MAW"/>
                             <constraint firstItem="DRI-m2-jZm" firstAttribute="trailing" secondItem="UA9-EH-tLT" secondAttribute="trailing" id="5LS-Xp-U5e"/>
-                            <constraint firstItem="UA9-EH-tLT" firstAttribute="top" secondItem="VHE-K4-bou" secondAttribute="bottom" constant="10" id="7Qo-4I-vzU"/>
+                            <constraint firstItem="UA9-EH-tLT" firstAttribute="top" secondItem="VHE-K4-bou" secondAttribute="bottom" constant="13" id="7Qo-4I-vzU"/>
                             <constraint firstItem="UA9-EH-tLT" firstAttribute="leading" secondItem="naj-Bb-mAl" secondAttribute="leading" constant="5" id="8dP-aX-yHi"/>
                             <constraint firstItem="1RV-QH-e3c" firstAttribute="leading" secondItem="naj-Bb-mAl" secondAttribute="leading" constant="20" id="BF8-no-w8X"/>
                             <constraint firstItem="B6Y-TQ-SV2" firstAttribute="centerY" secondItem="VHE-K4-bou" secondAttribute="centerY" id="BL8-eO-vdP"/>

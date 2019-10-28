@@ -11,15 +11,7 @@ import UIKit
 class CategoriesVC: UIViewController {
     
     // MARK: - Variable(s)
-    let categories = [
-        CATEGORY.GENERAL,
-        CATEGORY.BUSINESS,
-        CATEGORY.ENTERTAINMENT,
-        CATEGORY.HEALTH,
-        CATEGORY.TECH,
-        CATEGORY.SPORTS,
-        CATEGORY.SCIENCE
-    ]
+
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="380" id="KGk-i7-Jjw" customClass="BigArticleCell" customModule="Flash_Feed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="380"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="379.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N83-DH-Jm5" userLabel="Background">
+                        <rect key="frame" x="15" y="10" width="335" height="359.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5p-fy-KFd" userLabel="Category Line">
+                                <rect key="frame" x="5" y="15" width="325" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="o3D-Dx-AVb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  BUSINESS  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygb-3S-2j1">
+                                <rect key="frame" x="20" y="7.5" width="79.5" height="16"/>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_work_sign" translatesAutoresizingMaskIntoConstraints="NO" id="ozh-Qk-LeZ" customClass="JSImageView" customModule="Flash_Feed" customModuleProvider="target">
+                                <rect key="frame" x="5" y="29" width="325" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="nFc-SL-5es"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N0y-W4-Efp" userLabel="Tint" customClass="JSView" customModule="Flash_Feed" customModuleProvider="target">
+                                <rect key="frame" x="5" y="29" width="325" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SoftBank is turning to its Sprint leaders to bail out WeWork—they'll need to do better this time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gk-hW-vRs" userLabel="Article Title">
+                                <rect key="frame" x="20" y="127" width="295" height="92"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SP-uy-oJC" userLabel="Article Description">
+                                <rect key="frame" x="20" y="255.5" width="295" height="68"/>
+                                <string key="text">SoftBank now owns 80% of WeWork and is using the same trio that struggled operating Sprint to manage the office-sharing company.</string>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21m ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOj-vb-r4l" userLabel="Article Date">
+                                <rect key="frame" x="20" y="338.5" width="295" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N0y-W4-Efp" firstAttribute="trailing" secondItem="ozh-Qk-LeZ" secondAttribute="trailing" id="0yJ-ex-zbc"/>
+                            <constraint firstItem="Ygb-3S-2j1" firstAttribute="centerY" secondItem="q5p-fy-KFd" secondAttribute="centerY" id="74x-9a-1C6"/>
+                            <constraint firstItem="q5p-fy-KFd" firstAttribute="leading" secondItem="N83-DH-Jm5" secondAttribute="leading" constant="5" id="7E3-If-5dJ"/>
+                            <constraint firstItem="N0y-W4-Efp" firstAttribute="leading" secondItem="ozh-Qk-LeZ" secondAttribute="leading" id="82E-Fe-v3N"/>
+                            <constraint firstItem="N0y-W4-Efp" firstAttribute="top" secondItem="ozh-Qk-LeZ" secondAttribute="top" id="GTT-wd-GCD"/>
+                            <constraint firstAttribute="trailing" secondItem="q5p-fy-KFd" secondAttribute="trailing" constant="5" id="HdJ-2Q-QMD"/>
+                            <constraint firstItem="3Gk-hW-vRs" firstAttribute="bottom" secondItem="ozh-Qk-LeZ" secondAttribute="bottom" constant="-10" id="JAf-x0-pgK"/>
+                            <constraint firstItem="ozh-Qk-LeZ" firstAttribute="top" secondItem="q5p-fy-KFd" secondAttribute="bottom" constant="13" id="LX0-Ak-WKK"/>
+                            <constraint firstItem="3Gk-hW-vRs" firstAttribute="leading" secondItem="N83-DH-Jm5" secondAttribute="leading" constant="20" id="SRj-yR-5tR"/>
+                            <constraint firstItem="Ygb-3S-2j1" firstAttribute="leading" secondItem="N83-DH-Jm5" secondAttribute="leading" constant="20" id="UTH-WT-mYe"/>
+                            <constraint firstItem="ZOj-vb-r4l" firstAttribute="top" secondItem="3SP-uy-oJC" secondAttribute="bottom" constant="15" id="Uo9-pt-qEa"/>
+                            <constraint firstItem="3SP-uy-oJC" firstAttribute="leading" secondItem="N83-DH-Jm5" secondAttribute="leading" constant="20" id="bM6-S1-gMO"/>
+                            <constraint firstAttribute="bottom" secondItem="ZOj-vb-r4l" secondAttribute="bottom" constant="5" id="dja-rB-7Bo"/>
+                            <constraint firstAttribute="trailing" secondItem="ozh-Qk-LeZ" secondAttribute="trailing" constant="5" id="eW8-1j-LTb"/>
+                            <constraint firstItem="q5p-fy-KFd" firstAttribute="top" secondItem="N83-DH-Jm5" secondAttribute="top" constant="15" id="iDj-iB-b4h"/>
+                            <constraint firstItem="N0y-W4-Efp" firstAttribute="bottom" secondItem="ozh-Qk-LeZ" secondAttribute="bottom" id="nwF-jM-3Xo"/>
+                            <constraint firstAttribute="trailing" secondItem="ZOj-vb-r4l" secondAttribute="trailing" constant="20" id="pFE-cM-XpF"/>
+                            <constraint firstAttribute="trailing" secondItem="3Gk-hW-vRs" secondAttribute="trailing" constant="20" id="pcf-If-Ygk"/>
+                            <constraint firstAttribute="trailing" secondItem="3SP-uy-oJC" secondAttribute="trailing" constant="20" id="ryv-NM-gwy"/>
+                            <constraint firstItem="ozh-Qk-LeZ" firstAttribute="leading" secondItem="N83-DH-Jm5" secondAttribute="leading" constant="5" id="uuS-MG-2d3"/>
+                            <constraint firstItem="ZOj-vb-r4l" firstAttribute="leading" secondItem="N83-DH-Jm5" secondAttribute="leading" constant="20" id="vEd-zt-I0f"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="N83-DH-Jm5" secondAttribute="trailing" constant="15" id="5N8-dr-4OR"/>
+                    <constraint firstItem="N83-DH-Jm5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Gpi-Ad-hlY"/>
+                    <constraint firstItem="N83-DH-Jm5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="OFo-wd-gng"/>
+                    <constraint firstAttribute="bottom" secondItem="N83-DH-Jm5" secondAttribute="bottom" constant="10" id="gdY-yJ-H7O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="articleCategory" destination="Ygb-3S-2j1" id="qSo-FC-vpz"/>
+                <outlet property="articleDate" destination="ZOj-vb-r4l" id="rha-Gl-Opo"/>
+                <outlet property="articleDescription" destination="3SP-uy-oJC" id="FKM-zd-f3P"/>
+                <outlet property="articleImage" destination="ozh-Qk-LeZ" id="7id-Hw-ypj"/>
+                <outlet property="articleTitle" destination="3Gk-hW-vRs" id="hbC-bQ-M32"/>
+                <outlet property="bgView" destination="N83-DH-Jm5" id="KkO-1U-lQS"/>
+            </connections>
+            <point key="canvasLocation" x="148.55072463768118" y="103.79464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="we_work_sign" width="5472" height="3648"/>
+    </resources>
+</document>

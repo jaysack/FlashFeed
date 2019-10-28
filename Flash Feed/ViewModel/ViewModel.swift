@@ -54,6 +54,6 @@ class ViewModel {
                 return category
             }
         }
-        return "Other"
+        return "other"
     }
 }

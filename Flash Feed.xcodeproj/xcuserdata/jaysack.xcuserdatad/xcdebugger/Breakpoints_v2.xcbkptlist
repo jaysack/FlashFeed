@@ -19,5 +19,128 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flash Feed/View/ArticleCell.swift"
+            timestampString = "593941565.494876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "setCategory(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flash_Feed.ArticleCell.(setCategory in _06521BA924185494CFE9CA700644CBC8)(Swift.String) -&gt; ()"
+                  moduleName = "Flash Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaysack/Desktop/Marketing/Projects/Flash%20Feed/Flash%20Feed/Flash%20Feed/View/ArticleCell.swift"
+                  timestampString = "593940618.319332"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1082">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flash_Feed.ArticleCell.(setCategory in _06521BA924185494CFE9CA700644CBC8)(Swift.String) -&gt; ()"
+                  moduleName = "Flash Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaysack/Desktop/Marketing/Projects/Flash%20Feed/Flash%20Feed/Flash%20Feed/View/ArticleCell.swift"
+                  timestampString = "593940618.324458"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1478">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flash_Feed.ArticleCell.(setCategory in _06521BA924185494CFE9CA700644CBC8)(Swift.String) -&gt; ()"
+                  moduleName = "Flash Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaysack/Desktop/Marketing/Projects/Flash%20Feed/Flash%20Feed/Flash%20Feed/View/ArticleCell.swift"
+                  timestampString = "593940618.33096"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1874">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flash_Feed.ArticleCell.(setCategory in _06521BA924185494CFE9CA700644CBC8)(Swift.String) -&gt; ()"
+                  moduleName = "Flash Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaysack/Desktop/Marketing/Projects/Flash%20Feed/Flash%20Feed/Flash%20Feed/View/ArticleCell.swift"
+                  timestampString = "593940618.349116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "2270">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flash_Feed.ArticleCell.(setCategory in _06521BA924185494CFE9CA700644CBC8)(Swift.String) -&gt; ()"
+                  moduleName = "Flash Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaysack/Desktop/Marketing/Projects/Flash%20Feed/Flash%20Feed/Flash%20Feed/View/ArticleCell.swift"
+                  timestampString = "593940618.354473"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "2666">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flash_Feed.ArticleCell.(setCategory in _06521BA924185494CFE9CA700644CBC8)(Swift.String) -&gt; ()"
+                  moduleName = "Flash Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaysack/Desktop/Marketing/Projects/Flash%20Feed/Flash%20Feed/Flash%20Feed/View/ArticleCell.swift"
+                  timestampString = "593940618.35787"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "3062">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flash_Feed.ArticleCell.(setCategory in _06521BA924185494CFE9CA700644CBC8)(Swift.String) -&gt; ()"
+                  moduleName = "Flash Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaysack/Desktop/Marketing/Projects/Flash%20Feed/Flash%20Feed/Flash%20Feed/View/ArticleCell.swift"
+                  timestampString = "593940618.36142"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "3458">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

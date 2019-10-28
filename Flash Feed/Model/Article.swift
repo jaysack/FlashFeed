@@ -24,7 +24,8 @@ struct Article: Decodable {
     // MARK: - Decodable Enum
     private enum CodingKeys: String, CodingKey {
         case image = "urlToImage"
-        case source, author, title, descr, url, publishedAt, content
+        case descr = "description"
+        case source, author, title, url, publishedAt, content
     }
     
     

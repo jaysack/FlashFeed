@@ -6,7 +6,7 @@
 //  Copyright © 2019 Jonathan Sack. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - Data
 struct COUNTRY {
@@ -39,4 +39,29 @@ struct CATEGORY {
     static let SCIENCE = "science"
     static let SPORTS = "sports"
     static let TECH = "technology"
+    
+    struct COLOR {
+        
+        static let GENERAL = UIColor(red: 9/255, green: 132/255, blue: 227/255, alpha: 1)
+        static let ENTERTAINMENT = UIColor(red: 232/255, green: 67/255, blue: 147/255, alpha: 1)
+        static let BUSINESS = UIColor(red: 0/255, green: 184/255, blue: 148/255, alpha: 1)
+        static let HEALTH = UIColor(red: 108/255, green: 92/255, blue: 231/255, alpha: 1)
+        static let SCIENCE = UIColor(red: 253/255, green: 203/255, blue: 110/255, alpha: 1)
+        static let SPORTS = UIColor(red: 214/255, green: 48/255, blue: 49/255, alpha: 1)
+        static let TECH = UIColor(red: 225/255, green: 112/255, blue: 85/255, alpha: 1)
+        static let OTHER = UIColor(red: 99/255, green: 110/255, blue: 114/255, alpha: 1)
+    }
+}
+
+
+struct CORNER {
+    static let RADIUS: CGFloat = 5
+}
+
+
+struct SHADOW {
+    static let OFFSET = CGSize(width: 0, height: 1.0)
+    static let OPACITY: Float = 0.3
+    static let RADIUS: CGFloat = 4
+    static let COLOR = UIColor.black.cgColor
 }

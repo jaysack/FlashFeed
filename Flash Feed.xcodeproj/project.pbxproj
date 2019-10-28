@@ -30,6 +30,8 @@
 		E697C3EC23669FF5008F9FC2 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3EB23669FF5008F9FC2 /* CacheManager.swift */; };
 		E697C3EF2366AE27008F9FC2 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3EE2366AE27008F9FC2 /* DateFormatter+Extension.swift */; };
 		E697C3F12366B0FE008F9FC2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */; };
+		E697C3F42366C58A008F9FC2 /* BigArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */; };
+		E697C3F52366C58A008F9FC2 /* BigArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		E697C3EB23669FF5008F9FC2 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		E697C3EE2366AE27008F9FC2 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigArticleCell.swift; sourceTree = "<group>"; };
+		E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigArticleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 				E697C3CB2366102F008F9FC2 /* UI */,
 				E697C3CC23661035008F9FC2 /* XIB */,
 				E697C3E3236681AD008F9FC2 /* ArticleCell.swift */,
+				E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				E697C3E4236681AD008F9FC2 /* ArticleCell.xib */,
+				E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 			files = (
 				E697C3E6236681AD008F9FC2 /* ArticleCell.xib in Resources */,
 				E697C3BC23660FC8008F9FC2 /* LaunchScreen.storyboard in Resources */,
+				E697C3F52366C58A008F9FC2 /* BigArticleCell.xib in Resources */,
 				E697C3B923660FC8008F9FC2 /* Assets.xcassets in Resources */,
 				E697C3B423660FC6008F9FC2 /* Main.storyboard in Resources */,
 			);
@@ -291,6 +298,7 @@
 				E697C3E223667B25008F9FC2 /* CategoriesVC.swift in Sources */,
 				E697C3EC23669FF5008F9FC2 /* CacheManager.swift in Sources */,
 				E697C3D0236615A3008F9FC2 /* Source.swift in Sources */,
+				E697C3F42366C58A008F9FC2 /* BigArticleCell.swift in Sources */,
 				E697C3E823669BFB008F9FC2 /* JSView.swift in Sources */,
 				E697C3E5236681AD008F9FC2 /* ArticleCell.swift in Sources */,
 				E697C3D623661976008F9FC2 /* Private.swift in Sources */,

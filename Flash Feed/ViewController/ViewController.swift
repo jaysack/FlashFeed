@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - Variable(s)
+    let vm = ViewModel()
+    
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+//        vm.loadSources(in: COUNTRY.USA)
+        vm.loadArticles(in: COUNTRY.USA)
     }
 
 

@@ -11,7 +11,7 @@ import Foundation
 struct API {
 
     struct KEY {
-        
-        static let NEWS = ""
+        #warning("TO-DO: Double check .gitignore actually works !")
+        static let NEWS = "711742fd77254baabd24905531747e3f"
     }
 }

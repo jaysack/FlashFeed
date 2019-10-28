@@ -17,6 +17,11 @@
 		E697C3D223661686008F9FC2 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3D123661686008F9FC2 /* Article.swift */; };
 		E697C3D4236618D3008F9FC2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3D3236618D3008F9FC2 /* NetworkManager.swift */; };
 		E697C3D623661976008F9FC2 /* Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3D523661976008F9FC2 /* Private.swift */; };
+		E697C3D823661AFB008F9FC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3D723661AFB008F9FC2 /* Constants.swift */; };
+		E697C3DA23661CE3008F9FC2 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3D923661CE3008F9FC2 /* Endpoints.swift */; };
+		E697C3DC23662182008F9FC2 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3DB23662182008F9FC2 /* Decodable.swift */; };
+		E697C3DE23663F24008F9FC2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3DD23663F24008F9FC2 /* ViewModel.swift */; };
+		E697C3E0236668D9008F9FC2 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3DF236668D9008F9FC2 /* CoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		E697C3D123661686008F9FC2 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		E697C3D3236618D3008F9FC2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E697C3D523661976008F9FC2 /* Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Private.swift; sourceTree = "<group>"; };
+		E697C3D723661AFB008F9FC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E697C3D923661CE3008F9FC2 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		E697C3DB23662182008F9FC2 /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		E697C3DD23663F24008F9FC2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E697C3DF236668D9008F9FC2 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				E697C3D523661976008F9FC2 /* Private.swift */,
+				E697C3D923661CE3008F9FC2 /* Endpoints.swift */,
+				E697C3D723661AFB008F9FC2 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -107,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E697C3D3236618D3008F9FC2 /* NetworkManager.swift */,
+				E697C3DF236668D9008F9FC2 /* CoreManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -122,6 +135,7 @@
 		E697C3C923661026008F9FC2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E697C3DD23663F24008F9FC2 /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -155,6 +169,7 @@
 				E697C3CE2366104C008F9FC2 /* CoreData */,
 				E697C3D123661686008F9FC2 /* Article.swift */,
 				E697C3CF236615A3008F9FC2 /* Source.swift */,
+				E697C3DB23662182008F9FC2 /* Decodable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,13 +253,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E697C3E0236668D9008F9FC2 /* CoreManager.swift in Sources */,
 				E697C3D4236618D3008F9FC2 /* NetworkManager.swift in Sources */,
 				E697C3D0236615A3008F9FC2 /* Source.swift in Sources */,
 				E697C3D623661976008F9FC2 /* Private.swift in Sources */,
+				E697C3DE23663F24008F9FC2 /* ViewModel.swift in Sources */,
+				E697C3DC23662182008F9FC2 /* Decodable.swift in Sources */,
 				E697C3B123660FC6008F9FC2 /* ViewController.swift in Sources */,
 				E697C3AF23660FC6008F9FC2 /* AppDelegate.swift in Sources */,
 				E697C3B723660FC6008F9FC2 /* Flash_Feed.xcdatamodeld in Sources */,
 				E697C3D223661686008F9FC2 /* Article.swift in Sources */,
+				E697C3DA23661CE3008F9FC2 /* Endpoints.swift in Sources */,
+				E697C3D823661AFB008F9FC2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

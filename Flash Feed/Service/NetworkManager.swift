@@ -20,10 +20,10 @@ final class NetworkManager {
     
     
     // MARK: - Fetch Sources
-    func fetchSources(in country: String, completion: @escaping ([Source]) -> Void) {
+    func fetchSources(in language: String, completion: @escaping ([Source]) -> Void) {
         
         // Format URL
-        guard let url = URL(string: "\(ENDPOINT.SOURCE.DEFAULT)&country=\(country)") else {
+        guard let url = URL(string: "\(ENDPOINT.SOURCE.DEFAULT)&language=\(language)") else {
             print("JSError: Endpoint not valid")
             return
         }
@@ -56,10 +56,17 @@ final class NetworkManager {
     
     
     // MARK: - Fetch Articles
-    func fetchArticles(in country: String, completion: @escaping ([Article]) -> Void) {
+    func fetchArticles(in country: String, for category: String? = nil, completion: @escaping ([Article]) -> Void) {
+        
+        var endpoint = "\(ENDPOINT.HEADLINES.DEFAULT)&sortBy=latest&country=\(country)"
+
+        // Add category (only if needed)
+        if let category = category {
+            endpoint += "&category=\(category)"
+        }
         
         // Format URL
-        guard let url = URL(string: "\(ENDPOINT.HEADLINES.DEFAULT)&country=\(country)") else {
+        guard let url = URL(string: endpoint) else {
             print("JSError: Endpoint not valid")
             return
         }

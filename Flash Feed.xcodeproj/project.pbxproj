@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E697C3AF23660FC6008F9FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3AE23660FC6008F9FC2 /* AppDelegate.swift */; };
-		E697C3B123660FC6008F9FC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3B023660FC6008F9FC2 /* ViewController.swift */; };
+		E697C3B123660FC6008F9FC2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3B023660FC6008F9FC2 /* HomeVC.swift */; };
 		E697C3B423660FC6008F9FC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E697C3B223660FC6008F9FC2 /* Main.storyboard */; };
 		E697C3B723660FC6008F9FC2 /* Flash_Feed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E697C3B523660FC6008F9FC2 /* Flash_Feed.xcdatamodeld */; };
 		E697C3B923660FC8008F9FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E697C3B823660FC8008F9FC2 /* Assets.xcassets */; };
@@ -22,12 +22,20 @@
 		E697C3DC23662182008F9FC2 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3DB23662182008F9FC2 /* Decodable.swift */; };
 		E697C3DE23663F24008F9FC2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3DD23663F24008F9FC2 /* ViewModel.swift */; };
 		E697C3E0236668D9008F9FC2 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3DF236668D9008F9FC2 /* CoreManager.swift */; };
+		E697C3E223667B25008F9FC2 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3E123667B25008F9FC2 /* CategoriesVC.swift */; };
+		E697C3E5236681AD008F9FC2 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3E3236681AD008F9FC2 /* ArticleCell.swift */; };
+		E697C3E6236681AD008F9FC2 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E697C3E4236681AD008F9FC2 /* ArticleCell.xib */; };
+		E697C3E823669BFB008F9FC2 /* JSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3E723669BFB008F9FC2 /* JSView.swift */; };
+		E697C3EA23669C9E008F9FC2 /* JSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3E923669C9E008F9FC2 /* JSImageView.swift */; };
+		E697C3EC23669FF5008F9FC2 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3EB23669FF5008F9FC2 /* CacheManager.swift */; };
+		E697C3EF2366AE27008F9FC2 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3EE2366AE27008F9FC2 /* DateFormatter+Extension.swift */; };
+		E697C3F12366B0FE008F9FC2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E697C3AB23660FC6008F9FC2 /* Flash Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E697C3AE23660FC6008F9FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E697C3B023660FC6008F9FC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E697C3B023660FC6008F9FC2 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		E697C3B323660FC6008F9FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E697C3B623660FC6008F9FC2 /* Flash_Feed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flash_Feed.xcdatamodel; sourceTree = "<group>"; };
 		E697C3B823660FC8008F9FC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +50,14 @@
 		E697C3DB23662182008F9FC2 /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		E697C3DD23663F24008F9FC2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E697C3DF236668D9008F9FC2 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
+		E697C3E123667B25008F9FC2 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
+		E697C3E3236681AD008F9FC2 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		E697C3E4236681AD008F9FC2 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ArticleCell.xib; path = ../ArticleCell.xib; sourceTree = "<group>"; };
+		E697C3E723669BFB008F9FC2 /* JSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSView.swift; sourceTree = "<group>"; };
+		E697C3E923669C9E008F9FC2 /* JSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSImageView.swift; sourceTree = "<group>"; };
+		E697C3EB23669FF5008F9FC2 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		E697C3EE2366AE27008F9FC2 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +107,7 @@
 		E697C3C323660FDB008F9FC2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E697C3ED2366AE0E008F9FC2 /* Extensions */,
 				E697C3D523661976008F9FC2 /* Private.swift */,
 				E697C3D923661CE3008F9FC2 /* Endpoints.swift */,
 				E697C3D723661AFB008F9FC2 /* Constants.swift */,
@@ -120,6 +137,7 @@
 			children = (
 				E697C3D3236618D3008F9FC2 /* NetworkManager.swift */,
 				E697C3DF236668D9008F9FC2 /* CoreManager.swift */,
+				E697C3EB23669FF5008F9FC2 /* CacheManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -127,7 +145,8 @@
 		E697C3C82366101F008F9FC2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E697C3B023660FC6008F9FC2 /* ViewController.swift */,
+				E697C3B023660FC6008F9FC2 /* HomeVC.swift */,
+				E697C3E123667B25008F9FC2 /* CategoriesVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -145,6 +164,7 @@
 			children = (
 				E697C3CB2366102F008F9FC2 /* UI */,
 				E697C3CC23661035008F9FC2 /* XIB */,
+				E697C3E3236681AD008F9FC2 /* ArticleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +172,8 @@
 		E697C3CB2366102F008F9FC2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E697C3E723669BFB008F9FC2 /* JSView.swift */,
+				E697C3E923669C9E008F9FC2 /* JSImageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -159,6 +181,7 @@
 		E697C3CC23661035008F9FC2 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				E697C3E4236681AD008F9FC2 /* ArticleCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -180,6 +203,15 @@
 				E697C3B523660FC6008F9FC2 /* Flash_Feed.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E697C3ED2366AE0E008F9FC2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */,
+				E697C3EE2366AE27008F9FC2 /* DateFormatter+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E697C3E6236681AD008F9FC2 /* ArticleCell.xib in Resources */,
 				E697C3BC23660FC8008F9FC2 /* LaunchScreen.storyboard in Resources */,
 				E697C3B923660FC8008F9FC2 /* Assets.xcassets in Resources */,
 				E697C3B423660FC6008F9FC2 /* Main.storyboard in Resources */,
@@ -255,15 +288,22 @@
 			files = (
 				E697C3E0236668D9008F9FC2 /* CoreManager.swift in Sources */,
 				E697C3D4236618D3008F9FC2 /* NetworkManager.swift in Sources */,
+				E697C3E223667B25008F9FC2 /* CategoriesVC.swift in Sources */,
+				E697C3EC23669FF5008F9FC2 /* CacheManager.swift in Sources */,
 				E697C3D0236615A3008F9FC2 /* Source.swift in Sources */,
+				E697C3E823669BFB008F9FC2 /* JSView.swift in Sources */,
+				E697C3E5236681AD008F9FC2 /* ArticleCell.swift in Sources */,
 				E697C3D623661976008F9FC2 /* Private.swift in Sources */,
+				E697C3EA23669C9E008F9FC2 /* JSImageView.swift in Sources */,
 				E697C3DE23663F24008F9FC2 /* ViewModel.swift in Sources */,
 				E697C3DC23662182008F9FC2 /* Decodable.swift in Sources */,
-				E697C3B123660FC6008F9FC2 /* ViewController.swift in Sources */,
+				E697C3B123660FC6008F9FC2 /* HomeVC.swift in Sources */,
 				E697C3AF23660FC6008F9FC2 /* AppDelegate.swift in Sources */,
 				E697C3B723660FC6008F9FC2 /* Flash_Feed.xcdatamodeld in Sources */,
+				E697C3EF2366AE27008F9FC2 /* DateFormatter+Extension.swift in Sources */,
 				E697C3D223661686008F9FC2 /* Article.swift in Sources */,
 				E697C3DA23661CE3008F9FC2 /* Endpoints.swift in Sources */,
+				E697C3F12366B0FE008F9FC2 /* Date+Extension.swift in Sources */,
 				E697C3D823661AFB008F9FC2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

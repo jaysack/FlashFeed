@@ -24,6 +24,12 @@ struct COUNTRY {
 }
 
 
+struct LANGUAGE {
+    static let ENGLISH = "en"
+    static let FRENCH = "fr"
+}
+
+
 struct CATEGORY {
     
     static let GENERAL = "general"

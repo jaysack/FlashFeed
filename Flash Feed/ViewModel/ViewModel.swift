@@ -21,6 +21,7 @@ class ViewModel {
     // MARK: - Variables
     var delegate: ViewModelDelegate?
     var sources = [Source]()
+    var categories = [String]()
     var articles = [Article]() {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -35,12 +36,28 @@ class ViewModel {
         
         NM.fetchSources(in: language) { [weak self] (sources) in
             self?.sources = sources
+            
+            for source in sources {
+                
+                // Add category into array if needed
+                if let category = source.category, !(self?.categories.contains(category))! {
+                    self?.categories.append(category)
+                }
+            }
         }
     }
     
-    func loadArticles(in country: String) {
-        NM.fetchArticles(in: country) { [weak self] (articles) in
+    func loadArticles(in country: String, for category: String? = nil) {
+        NM.fetchArticles(in: country, for: category) { [weak self] (articles) in
+            // Update container array
             self?.articles = articles
+        }
+    }
+    
+    func loadNextBatch(in country: String, of currentCategory: String, for pageNumber: Int) {
+        NM.fetchArticles(in: country, for: currentCategory, page: pageNumber) { [weak self] (articles) in
+            // Append to container array
+            self?.articles += articles
         }
     }
     

@@ -19,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-BW-8E6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="SeI-5K-N6K"/>
+                                    <constraint firstAttribute="height" constant="50" id="SeI-5K-N6K"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="asy-So-8uu" kind="embed" id="h3H-uM-ZjK"/>
                                 </connections>
                             </containerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-Xk-L8v">
-                                <rect key="frame" x="0.0" y="148" width="414" height="748"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -81,19 +81,54 @@
             <objects>
                 <viewController id="asy-So-8uu" customClass="CategoriesVC" customModule="Flash_Feed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q3H-2R-vWI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vOC-P5-gAx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.42505280400000001" blue="0.47695049420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6eu-iF-pO7">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6eu-iF-pO7">
+                                    <size key="itemSize" width="132" height="35"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="vJ7-vd-Pcw" customClass="CategoryCell" customModule="Flash_Feed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="7.5" width="132" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="132" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUSINESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-vJ-Izc">
+                                                    <rect key="frame" x="31" y="9" width="70.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INr-Mx-nUI" userLabel="Lip">
+                                                    <rect key="frame" x="0.0" y="30" width="132" height="5"/>
+                                                    <color key="backgroundColor" red="1" green="0.42505280400000001" blue="0.47695049420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="5" id="3rF-qB-TaK"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="p8S-vJ-Izc" firstAttribute="centerX" secondItem="vJ7-vd-Pcw" secondAttribute="centerX" id="5nb-dR-lYd"/>
+                                            <constraint firstItem="p8S-vJ-Izc" firstAttribute="centerY" secondItem="vJ7-vd-Pcw" secondAttribute="centerY" id="NcO-xX-YUj"/>
+                                            <constraint firstAttribute="trailing" secondItem="INr-Mx-nUI" secondAttribute="trailing" id="aJU-ZQ-LYs"/>
+                                            <constraint firstItem="INr-Mx-nUI" firstAttribute="leading" secondItem="vJ7-vd-Pcw" secondAttribute="leading" id="bs9-3q-6hW"/>
+                                            <constraint firstAttribute="bottom" secondItem="INr-Mx-nUI" secondAttribute="bottom" id="kmF-yR-39a"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="categoryTitle" destination="p8S-vJ-Izc" id="6Cs-7f-Z1q"/>
+                                            <outlet property="cellLip" destination="INr-Mx-nUI" id="tbS-ty-EKq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="asy-So-8uu" id="ump-Ja-VrG"/>
                                     <outlet property="delegate" destination="asy-So-8uu" id="3yi-Kq-Krf"/>
@@ -109,10 +144,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ejE-J4-OPP"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryCollectionView" destination="vOC-P5-gAx" id="GqT-w4-Vbk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mkk-zp-9dZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="-306"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="-306.02678571428572"/>
         </scene>
     </scenes>
 </document>

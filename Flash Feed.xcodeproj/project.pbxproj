@@ -32,6 +32,7 @@
 		E697C3F12366B0FE008F9FC2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */; };
 		E697C3F42366C58A008F9FC2 /* BigArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */; };
 		E697C3F52366C58A008F9FC2 /* BigArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */; };
+		E697C3F923671BC2008F9FC2 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F823671BC2008F9FC2 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigArticleCell.swift; sourceTree = "<group>"; };
 		E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigArticleCell.xib; sourceTree = "<group>"; };
+		E697C3F823671BC2008F9FC2 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				E697C3CC23661035008F9FC2 /* XIB */,
 				E697C3E3236681AD008F9FC2 /* ArticleCell.swift */,
 				E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */,
+				E697C3F823671BC2008F9FC2 /* CategoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				E697C3B723660FC6008F9FC2 /* Flash_Feed.xcdatamodeld in Sources */,
 				E697C3EF2366AE27008F9FC2 /* DateFormatter+Extension.swift in Sources */,
 				E697C3D223661686008F9FC2 /* Article.swift in Sources */,
+				E697C3F923671BC2008F9FC2 /* CategoryCell.swift in Sources */,
 				E697C3DA23661CE3008F9FC2 /* Endpoints.swift in Sources */,
 				E697C3F12366B0FE008F9FC2 /* Date+Extension.swift in Sources */,
 				E697C3D823661AFB008F9FC2 /* Constants.swift in Sources */,

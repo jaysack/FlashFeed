@@ -56,9 +56,9 @@ final class NetworkManager {
     
     
     // MARK: - Fetch Articles
-    func fetchArticles(in country: String, for category: String? = nil, completion: @escaping ([Article]) -> Void) {
+    func fetchArticles(in country: String, for category: String? = nil, page pageNumber: Int = 1, completion: @escaping ([Article]) -> Void) {
         
-        var endpoint = "\(ENDPOINT.HEADLINES.DEFAULT)&sortBy=latest&country=\(country)"
+        var endpoint = "\(ENDPOINT.HEADLINES.DEFAULT)&sortBy=latest&country=\(country)&page=\(pageNumber)&pageSize=\(20)"
 
         // Add category (only if needed)
         if let category = category {

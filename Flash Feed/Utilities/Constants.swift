@@ -48,9 +48,14 @@ struct CATEGORY {
         static let HEALTH = UIColor(red: 108/255, green: 92/255, blue: 231/255, alpha: 1)
         static let SCIENCE = UIColor(red: 253/255, green: 203/255, blue: 110/255, alpha: 1)
         static let SPORTS = UIColor(red: 214/255, green: 48/255, blue: 49/255, alpha: 1)
-        static let TECH = UIColor(red: 225/255, green: 112/255, blue: 85/255, alpha: 1)
+        static let TECH = UIColor(red: 130/255, green: 88/255, blue: 159/255, alpha: 1)
         static let OTHER = UIColor(red: 99/255, green: 110/255, blue: 114/255, alpha: 1)
     }
+}
+
+
+struct NOTIFICATION {
+    static let CATEGORY = Notification.Name("CategoryWasChanged")
 }
 
 
@@ -65,3 +70,12 @@ struct SHADOW {
     static let RADIUS: CGFloat = 4
     static let COLOR = UIColor.black.cgColor
 }
+
+
+struct COLOR {
+    static let PRIMARY = UIColor(red: 255/255, green: 107/255, blue: 107/255, alpha: 1)
+    static let NEUTRAL = UIColor(red: 200/255, green: 214/255, blue: 229/255, alpha: 1)
+    static let DARK = UIColor(red: 34/255, green: 47/255, blue: 62/255, alpha: 1)
+}
+
+

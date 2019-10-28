@@ -16,6 +16,10 @@ class HomeVC: UIViewController {
     
     // MARK: - Variable(s)
     let vm = ViewModel()
+    var currentCategory: String = CATEGORY.GENERAL
+    var currentPageNumber: Int = 1
+    var lastTableViewIndex: Int = 0
+    var fetchingMore: Bool = false
     
     
     // MARK: - Lifecycle Methods
@@ -24,6 +28,7 @@ class HomeVC: UIViewController {
         
         setupViewModel()
         registerCustomCells()
+        registerNotification()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,13 +52,48 @@ class HomeVC: UIViewController {
         articlesTableView.register(articleCell, forCellReuseIdentifier: ArticleCell.identifier)
         articlesTableView.register(bigArticleCell, forCellReuseIdentifier: BigArticleCell.identifier)
     }
+    
+    fileprivate func registerNotification() {
+        
+        NotificationCenter.default.addObserver(forName: NOTIFICATION.CATEGORY, object: nil, queue: .main) { [weak self] note in
+            
+            if let userInfo = note.userInfo as? [String: String] {
+                
+                // Reset number of pages to load (only if new categry selected)
+                if self?.currentCategory != userInfo["category"] {
+                    self?.currentPageNumber = 1
+                    self?.lastTableViewIndex = 1
+                }
+                
+                // Load specific category
+                self?.currentCategory = userInfo["category"]!
+                self?.vm.loadArticles(in: COUNTRY.USA, for: userInfo["category"])
+                
+            }
+        }
+    }
+    
+    fileprivate func beginBatchFetch() {
+        fetchingMore = true
+    }
+    
+    fileprivate func stopBatchFetch() {
+        fetchingMore = false
+    }
 
 }
+
 
 // MARK: - View Model Extension
 extension HomeVC: ViewModelDelegate {
     func update() {
         articlesTableView.reloadData()
+        
+        if currentPageNumber > 1 {
+            articlesTableView.scrollToRow(at: IndexPath(row: lastTableViewIndex, section: 0), at: .bottom, animated: false)
+        } else {
+            articlesTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        }
     }
 }
 
@@ -61,7 +101,7 @@ extension HomeVC: ViewModelDelegate {
 // MARK: - Table View Extension
 extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return vm.articles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,11 +111,16 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
+        // Prepare next batch
+        if indexPath.row == (vm.articles.count - 1) {
+            lastTableViewIndex = indexPath.row
+        }
+        
         // Get article
         let article = vm.articles[indexPath.row]
         
         // Config. cell
-        if indexPath.row == 1 || indexPath.row % 6 == 0 && indexPath.row != 0 {
+        if (indexPath.row == 1 || indexPath.row % 6 == 0 && indexPath.row != 0) && currentCategory == CATEGORY.GENERAL {
             let cell = tableView.dequeueReusableCell(withIdentifier: BigArticleCell.identifier, for: indexPath) as! BigArticleCell
             cell.article = article
             cell.category = vm.getCategory(of: article)
@@ -85,7 +130,12 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCell.identifier, for: indexPath) as! ArticleCell
             cell.article = article
-            cell.category = vm.getCategory(of: article)
+            
+            if currentCategory == CATEGORY.GENERAL {
+                cell.category = vm.getCategory(of: article)
+            } else {
+                cell.category = currentCategory
+            }
             
             return cell
         }
@@ -98,6 +148,36 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             return 380
         } else {
             return 227
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Deselect cell
+        tableView.deselectRow(at: IndexPath(row: indexPath.row, section: 0), animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.height {
+            
+            if !fetchingMore {
+                
+                // Allow API requests
+                beginBatchFetch()
+                
+                // Load next batch
+                currentPageNumber += 1
+                vm.loadNextBatch(in: COUNTRY.USA, of: currentCategory, for: currentPageNumber)
+
+                // Stop further requests
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                    self?.stopBatchFetch()
+                }
+            }
         }
     }
     

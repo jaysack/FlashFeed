@@ -68,6 +68,7 @@ class BigArticleCell: UITableViewCell {
     
     fileprivate func setDescription(_ description: String) {
         articleDescription.text = description
+        articleDescription.textColor = COLOR.DARK
     }
     
     fileprivate func setDate(_ publishedDate: String) {
@@ -77,6 +78,7 @@ class BigArticleCell: UITableViewCell {
         
         // Get user friendly format
         articleDate.text = date?.timeAgoDisplay()
+        articleDate.textColor = COLOR.DARK
     }
     
     fileprivate func setImage() {

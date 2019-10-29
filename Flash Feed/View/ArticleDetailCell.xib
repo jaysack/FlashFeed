@@ -23,19 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="376" height="720"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_work_sign" translatesAutoresizingMaskIntoConstraints="NO" id="UCe-xg-tzO" userLabel="Article Image">
-                                <rect key="frame" x="0.0" y="0.0" width="376" height="220"/>
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="Ck5-jb-Iax"/>
+                                    <constraint firstAttribute="height" constant="240" id="Ck5-jb-Iax"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SoftBank is turning to its Sprint leaders to bail out WeWork—they’ll need to do better this time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN5-fD-1e0" userLabel="Article Title">
-                                <rect key="frame" x="20" y="240" width="336" height="96"/>
+                                <rect key="frame" x="20" y="260" width="336" height="96"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-yG-0Jc" userLabel="Article Author">
-                                <rect key="frame" x="20" y="356" width="336" height="18"/>
+                                <rect key="frame" x="20" y="376" width="336" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvB-bE-sn3">
                                         <rect key="frame" x="0.0" y="0.0" width="17" height="18"/>
@@ -52,13 +52,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 28, 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S2-65-Aoq" userLabel="Article Date">
-                                <rect key="frame" x="20" y="379" width="336" height="17"/>
+                                <rect key="frame" x="20" y="399" width="336" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnQ-Nt-VXU" userLabel="Line Divider">
-                                <rect key="frame" x="20" y="416" width="60" height="2"/>
+                                <rect key="frame" x="20" y="436" width="60" height="2"/>
                                 <color key="backgroundColor" red="1" green="0.42505280400000001" blue="0.47695049420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="64R-7J-Awf"/>
@@ -66,14 +66,14 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCM-Sw-3cQ" userLabel="Article Description">
-                                <rect key="frame" x="20" y="438" width="336" height="72"/>
+                                <rect key="frame" x="20" y="458" width="336" height="72"/>
                                 <string key="text">SoftBank now owns 80% of WeWork and is using the same trio that struggled operating Sprint to manage the office-sharing company.</string>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwe-bu-fC8" userLabel="Article Content">
-                                <rect key="frame" x="20" y="530" width="336" height="1620"/>
+                                <rect key="frame" x="20" y="550" width="336" height="1620"/>
                                 <mutableString key="text">SoftBank has a reclamation project on its hands. This week, CEO Masayoshi Son swooped in to take 80% control of WeWork in what amounted to a bailout of the office-sharing company after the public markets rejected it.
 
 We’ve seen this move before. Last time, the results weren’t exactly stellar.

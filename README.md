@@ -3,7 +3,7 @@
 ## Overview
 **FlashFeed** is a News App offering delivering news from more than 30,000 different sources, including all major news outlets and popular websites
 
-<img src="Demo/demo0.gif" width="250" height="500">   <img src="Demo/demo1.gif" width="250" height="500">   <img src="Demo/demo2.gif" width="250" height="500">  <img src="Demo/demo3.gif" width="250" height="500">
+<img src="Demo/demo0.gif" width="230" height="460">   <img src="Demo/demo1.gif" width="230" height="460">   <img src="Demo/demo2.gif" width="230" height="460">  <img src="Demo/demo3.gif" width="230" height="460">
 
 
 ## Development

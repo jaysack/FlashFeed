@@ -29,7 +29,7 @@ class HomeVC: UIViewController {
         setupViewModel()
         registerCustomCells()
         registerNotification()
-        setNavigationTitle()
+        setNavigationTitle(with: "FlashFeed")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,10 +38,6 @@ class HomeVC: UIViewController {
 
     
     // MARK: - Functions
-    fileprivate func setNavigationTitle() {
-        self.navigationItem.title = "FlashFeed"
-    }
-    
     fileprivate func setupViewModel() {
         vm.loadSources(in: LANGUAGE.ENGLISH)
         vm.loadArticles(in: COUNTRY.USA)
@@ -94,6 +90,7 @@ class HomeVC: UIViewController {
                 
                 detailVC.vm = self.vm
                 detailVC.startIndex = startIndex
+                detailVC.sectionTitle = currentCategory
                 
                 navigator.pushViewController(detailVC, animated: true)
             }

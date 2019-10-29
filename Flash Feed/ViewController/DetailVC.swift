@@ -18,6 +18,7 @@ class DetailVC: UIViewController {
     static let identifier = "DetailVC"
     var vm: ViewModel!
     var startIndex: Int!
+    var sectionTitle: String!
     
     
     // MARK: - Lifecycle Methods
@@ -29,6 +30,8 @@ class DetailVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setScrollPosition()
+        setNavigationTitle(with: sectionTitle.capitalized)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
     }
     
 

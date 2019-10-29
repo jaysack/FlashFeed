@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flash Feed/ViewController/DetailVC.swift"
-            timestampString = "594001730.382442"
+            timestampString = "594003548.034868"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "setScrollPosition()"
             landmarkType = "7">
          </BreakpointContent>

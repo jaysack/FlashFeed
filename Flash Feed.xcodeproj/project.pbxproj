@@ -33,6 +33,7 @@
 		E697C3F42366C58A008F9FC2 /* BigArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */; };
 		E697C3F52366C58A008F9FC2 /* BigArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */; };
 		E697C3F923671BC2008F9FC2 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F823671BC2008F9FC2 /* CategoryCell.swift */; };
+		E6C0F4262367C4880010C9FA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C0F4252367C4880010C9FA /* UIViewController+Extension.swift */; };
 		E6F8767323678DCE00D13EDB /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8767223678DCE00D13EDB /* DetailVC.swift */; };
 		E6F876762367903D00D13EDB /* ArticleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F876742367903D00D13EDB /* ArticleDetailCell.swift */; };
 		E6F876772367903D00D13EDB /* ArticleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F876752367903D00D13EDB /* ArticleDetailCell.xib */; };
@@ -68,6 +69,7 @@
 		E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigArticleCell.swift; sourceTree = "<group>"; };
 		E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigArticleCell.xib; sourceTree = "<group>"; };
 		E697C3F823671BC2008F9FC2 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		E6C0F4252367C4880010C9FA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		E6F8767223678DCE00D13EDB /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		E6F876742367903D00D13EDB /* ArticleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailCell.swift; sourceTree = "<group>"; };
 		E6F876752367903D00D13EDB /* ArticleDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ArticleDetailCell.xib; path = ../ArticleDetailCell.xib; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				E6F8767A2367A69A00D13EDB /* UIView+Extension.swift */,
+				E6C0F4252367C4880010C9FA /* UIViewController+Extension.swift */,
 				E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */,
 				E697C3EE2366AE27008F9FC2 /* DateFormatter+Extension.swift */,
 			);
@@ -322,6 +325,7 @@
 				E697C3EA23669C9E008F9FC2 /* JSImageView.swift in Sources */,
 				E697C3DE23663F24008F9FC2 /* ViewModel.swift in Sources */,
 				E697C3DC23662182008F9FC2 /* Decodable.swift in Sources */,
+				E6C0F4262367C4880010C9FA /* UIViewController+Extension.swift in Sources */,
 				E697C3B123660FC6008F9FC2 /* HomeVC.swift in Sources */,
 				E6F8767323678DCE00D13EDB /* DetailVC.swift in Sources */,
 				E697C3AF23660FC6008F9FC2 /* AppDelegate.swift in Sources */,

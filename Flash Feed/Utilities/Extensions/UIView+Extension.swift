@@ -32,6 +32,17 @@ extension UIView {
     }
     
     
+    // Set Content
+    func setContent(_ content: String?, to label: UILabel) {
+        
+        if let content = content {
+            label.text = content
+        } else {
+            label.text = ""
+        }
+    }
+    
+    
     // Set Description Label
     func setDescription(_ description: String?, to label: UILabel) {
         

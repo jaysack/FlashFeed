@@ -72,14 +72,44 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwe-bu-fC8" userLabel="Article Content">
+                                <rect key="frame" x="20" y="530" width="336" height="1620"/>
+                                <mutableString key="text">SoftBank has a reclamation project on its hands. This week, CEO Masayoshi Son swooped in to take 80% control of WeWork in what amounted to a bailout of the office-sharing company after the public markets rejected it.
+
+We’ve seen this move before. Last time, the results weren’t exactly stellar.
+
+Six years ago, SoftBank bought a 72% stake in Sprint, increasing it to more than 80% over time, in an effort to become a major player in U.S. wireless.
+
+Sprint and WeWork have very little in common as businesses. But the same SoftBank execs — Son, Marcelo Claure and Ron Fisher — are calling the shots and trying to steer a floundering company to sustained profitability.
+
+By the time SoftBank took its first $4.4 billion stake in WeWork, the firm had already established itself as a big money player in Silicon Valley. The environment was very different in October 2012, when SoftBank agreed to take 70% control of Sprint for $20.1 billion (it moved up to 72% for $21.6 billion at the close of the deal). Son said at the time that he could use SoftBank’s experience in the wireless industry in Japan to create the fastest network in the U.S.
+
+SoftBank successfully engineered a sale of Sprint for $6.62 per share to T-Mobile in 2018. (State attorneys general are in court attempting to quash the deal on grounds that it will unacceptably decrease competition.) But SoftBank acquired its majority stake in Sprint for $7.65 a share in 2013. When SoftBank bought Sprint, it was the third-largest U.S. wireless carrier by subscribers. When SoftBank sold, Sprint was a distant fourth behind Verizon, AT&amp;T and T-Mobile.
+
+Sprint even acknowledged in April it didn’t have a sustainable path forward in a filing to the Federal Communications Commission, asking for the regulator to approve its sale.
+
+“Sprint is in a very difficult situation that is only getting worse,” the company said in the letter. “Sprint is losing customers — which then reduces revenues and cash flow — further limiting its ability to invest in its network and service its debt. Simply put, Sprint is not on a sustainable competitive path.”
+
+Adding up its positions in Sprint and WeWork, SoftBank has about $40 billion at stake, putting the firm’s trio of leaders at the center of two highly consequential corporate ordeals that could make or break Son’s image as a titan of American business.
+
+There’s little reason to believe Son, Claure and Fisher can use their Sprint playbook to give WeWork investors and employees confidence in their future success, said Craig Moffett, a telecommunications analyst at MoffettNathanson.
+
+“Sprint has been an unmitigated disaster,” said Moffett. “Sprint has contracted steadily since SoftBank bought it, even in a growing wireless market. Their only hope for an exit is to pray their deal to sell it to T-Mobile is approved.”</mutableString>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UCe-xg-tzO" firstAttribute="top" secondItem="EeD-wg-dE4" secondAttribute="top" id="0Fk-Em-Blb"/>
+                            <constraint firstItem="vwe-bu-fC8" firstAttribute="top" secondItem="WCM-Sw-3cQ" secondAttribute="bottom" constant="20" id="18y-KX-HZF"/>
+                            <constraint firstItem="vwe-bu-fC8" firstAttribute="leading" secondItem="EeD-wg-dE4" secondAttribute="leading" constant="20" id="2qq-9c-6yE"/>
                             <constraint firstItem="hnQ-Nt-VXU" firstAttribute="leading" secondItem="EeD-wg-dE4" secondAttribute="leading" constant="20" id="3sw-48-yaM"/>
                             <constraint firstItem="hnQ-Nt-VXU" firstAttribute="top" secondItem="1S2-65-Aoq" secondAttribute="bottom" constant="20" id="BJM-SI-0ug"/>
                             <constraint firstAttribute="trailing" secondItem="EN5-fD-1e0" secondAttribute="trailing" constant="20" id="D3X-Ue-y7f"/>
                             <constraint firstItem="UCe-xg-tzO" firstAttribute="leading" secondItem="EeD-wg-dE4" secondAttribute="leading" id="G1I-bS-TNF"/>
+                            <constraint firstAttribute="trailing" secondItem="vwe-bu-fC8" secondAttribute="trailing" constant="20" id="IGY-bl-xvB"/>
                             <constraint firstItem="WCM-Sw-3cQ" firstAttribute="leading" secondItem="EeD-wg-dE4" secondAttribute="leading" constant="20" id="LTB-bn-Nax"/>
                             <constraint firstItem="EN5-fD-1e0" firstAttribute="leading" secondItem="EeD-wg-dE4" secondAttribute="leading" constant="20" id="LTg-P6-FN9"/>
                             <constraint firstItem="1S2-65-Aoq" firstAttribute="top" secondItem="BOP-yG-0Jc" secondAttribute="bottom" constant="5" id="LrT-dS-YpG"/>
@@ -106,6 +136,7 @@
             <size key="customSize" width="376" height="720"/>
             <connections>
                 <outlet property="articleAuthor" destination="tMW-SB-NHN" id="TWT-04-ffW"/>
+                <outlet property="articleContent" destination="vwe-bu-fC8" id="SPf-YM-mFA"/>
                 <outlet property="articleDate" destination="1S2-65-Aoq" id="Qhf-U4-GPS"/>
                 <outlet property="articleDescription" destination="WCM-Sw-3cQ" id="Dfi-YN-aJ7"/>
                 <outlet property="articleImage" destination="UCe-xg-tzO" id="BO0-LT-JpD"/>

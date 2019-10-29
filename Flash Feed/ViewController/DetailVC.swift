@@ -20,12 +20,25 @@ class DetailVC: UIViewController {
     var startIndex: Int!
     var sectionTitle: String!
     
+    var layout: UICollectionViewFlowLayout = {
+        
+        let layout = UICollectionViewFlowLayout()
+        let width = UIScreen.main.bounds.size.width
+        let height = UIScreen.main.bounds.size.height
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = CGSize(width: width, height: height)
+        return layout
+    }()
+    
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerCustomCell()
+        
+        // Set Auto Sizing Layout
+        articleCollectionView.collectionViewLayout = layout
     }
     
     override func viewWillAppear(_ animated: Bool) {

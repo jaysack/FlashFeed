@@ -16,10 +16,9 @@ class ArticleDetailCell: UICollectionViewCell {
     @IBOutlet weak var articleImage: UIImageView!
     @IBOutlet weak var articleDate: UILabel!
     @IBOutlet weak var articleDescription: UILabel!
-    
+    @IBOutlet weak var articleContent: UILabel!
     
     @IBOutlet weak var lineDivider: UIView!
-    
     
     
     // MARK: - Variables
@@ -28,6 +27,7 @@ class ArticleDetailCell: UICollectionViewCell {
         didSet {
             setTitle(self.article.title, to: articleTitle)
             setAuthor(self.article.author, to: articleAuthor)
+            setContent(self.article.content, to: articleContent)
             setDate(self.article.publishedAt, to: articleDate)
             setImage(from: self.article, to: articleImage)
             setDescription(self.article.descr, to: articleDescription)
@@ -35,9 +35,19 @@ class ArticleDetailCell: UICollectionViewCell {
     }
     
     
-    // MARK: - Awake From Nib
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    // MARK: - Auto Sizing Function
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        
+        setNeedsLayout()
+        layoutIfNeeded()
+        
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var frame = layoutAttributes.frame
+        
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        
+        return layoutAttributes
     }
     
 

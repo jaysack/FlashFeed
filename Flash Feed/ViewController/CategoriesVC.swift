@@ -53,7 +53,7 @@ extension CategoriesVC: UICollectionViewDataSource, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         // Add padding to number of characters
-        let width = (categories[indexPath.row].count * 9) + 22
+        let width = (categories[indexPath.row].count * 9) + 24
         return CGSize(width: width, height: 50)
     }
     

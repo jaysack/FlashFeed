@@ -58,6 +58,46 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
         </scene>
+        <!--DetailVC-->
+        <scene sceneID="SiE-hE-kn0">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" automaticallyAdjustsScrollViewInsets="NO" id="y23-SM-tvP" customClass="DetailVC" customModule="Flash_Feed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbr-dD-AIU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jqf-On-Brg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ipv-ee-Hez">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="y23-SM-tvP" id="Ybp-4s-Mqy"/>
+                                    <outlet property="delegate" destination="y23-SM-tvP" id="GUk-GO-GNR"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jqf-On-Brg" secondAttribute="bottom" id="BEi-gP-w9W"/>
+                            <constraint firstAttribute="trailing" secondItem="jqf-On-Brg" secondAttribute="trailing" id="SxR-1C-KW9"/>
+                            <constraint firstItem="jqf-On-Brg" firstAttribute="leading" secondItem="qbr-dD-AIU" secondAttribute="leading" id="btQ-pi-HLQ"/>
+                            <constraint firstItem="jqf-On-Brg" firstAttribute="top" secondItem="78W-zH-W0C" secondAttribute="top" id="kAC-Ri-PH4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="78W-zH-W0C"/>
+                    </view>
+                    <connections>
+                        <outlet property="articleCollectionView" destination="jqf-On-Brg" id="ugV-w2-EXS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xwe-wb-DRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947.826086956522" y="93.75"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="R1B-jY-U1N">
             <objects>
@@ -74,7 +114,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYs-qd-mAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="94"/>
+            <point key="canvasLocation" x="157" y="94"/>
         </scene>
         <!--CategoriesVC-->
         <scene sceneID="VmW-ap-aU0">

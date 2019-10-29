@@ -29,6 +29,7 @@ class HomeVC: UIViewController {
         setupViewModel()
         registerCustomCells()
         registerNotification()
+        setNavigationTitle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +38,10 @@ class HomeVC: UIViewController {
 
     
     // MARK: - Functions
+    fileprivate func setNavigationTitle() {
+        self.navigationItem.title = "FlashFeed"
+    }
+    
     fileprivate func setupViewModel() {
         vm.loadSources(in: LANGUAGE.ENGLISH)
         vm.loadArticles(in: COUNTRY.USA)
@@ -79,6 +84,20 @@ class HomeVC: UIViewController {
     
     fileprivate func stopBatchFetch() {
         fetchingMore = false
+    }
+    
+    fileprivate func presentDetailVC(from startIndex: Int) {
+        
+        if let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: DetailVC.identifier) as? DetailVC {
+            
+            if let navigator = navigationController {
+                
+                detailVC.vm = self.vm
+                detailVC.startIndex = startIndex
+                
+                navigator.pushViewController(detailVC, animated: true)
+            }
+        }
     }
 
 }
@@ -155,6 +174,9 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         
         // Deselect cell
         tableView.deselectRow(at: IndexPath(row: indexPath.row, section: 0), animated: true)
+        
+        // Present Article
+        presentDetailVC(from: indexPath.row)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

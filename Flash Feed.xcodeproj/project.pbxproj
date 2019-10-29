@@ -33,6 +33,10 @@
 		E697C3F42366C58A008F9FC2 /* BigArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */; };
 		E697C3F52366C58A008F9FC2 /* BigArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */; };
 		E697C3F923671BC2008F9FC2 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E697C3F823671BC2008F9FC2 /* CategoryCell.swift */; };
+		E6F8767323678DCE00D13EDB /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8767223678DCE00D13EDB /* DetailVC.swift */; };
+		E6F876762367903D00D13EDB /* ArticleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F876742367903D00D13EDB /* ArticleDetailCell.swift */; };
+		E6F876772367903D00D13EDB /* ArticleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F876752367903D00D13EDB /* ArticleDetailCell.xib */; };
+		E6F8767B2367A69A00D13EDB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8767A2367A69A00D13EDB /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigArticleCell.swift; sourceTree = "<group>"; };
 		E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigArticleCell.xib; sourceTree = "<group>"; };
 		E697C3F823671BC2008F9FC2 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		E6F8767223678DCE00D13EDB /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		E6F876742367903D00D13EDB /* ArticleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailCell.swift; sourceTree = "<group>"; };
+		E6F876752367903D00D13EDB /* ArticleDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ArticleDetailCell.xib; path = ../ArticleDetailCell.xib; sourceTree = "<group>"; };
+		E6F8767A2367A69A00D13EDB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				E697C3B023660FC6008F9FC2 /* HomeVC.swift */,
+				E6F8767223678DCE00D13EDB /* DetailVC.swift */,
 				E697C3E123667B25008F9FC2 /* CategoriesVC.swift */,
 			);
 			path = ViewController;
@@ -172,6 +181,7 @@
 				E697C3CC23661035008F9FC2 /* XIB */,
 				E697C3E3236681AD008F9FC2 /* ArticleCell.swift */,
 				E697C3F22366C58A008F9FC2 /* BigArticleCell.swift */,
+				E6F876742367903D00D13EDB /* ArticleDetailCell.swift */,
 				E697C3F823671BC2008F9FC2 /* CategoryCell.swift */,
 			);
 			path = View;
@@ -191,6 +201,7 @@
 			children = (
 				E697C3E4236681AD008F9FC2 /* ArticleCell.xib */,
 				E697C3F32366C58A008F9FC2 /* BigArticleCell.xib */,
+				E6F876752367903D00D13EDB /* ArticleDetailCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 		E697C3ED2366AE0E008F9FC2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E6F8767A2367A69A00D13EDB /* UIView+Extension.swift */,
 				E697C3F02366B0FE008F9FC2 /* Date+Extension.swift */,
 				E697C3EE2366AE27008F9FC2 /* DateFormatter+Extension.swift */,
 			);
@@ -282,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E697C3E6236681AD008F9FC2 /* ArticleCell.xib in Resources */,
+				E6F876772367903D00D13EDB /* ArticleDetailCell.xib in Resources */,
 				E697C3BC23660FC8008F9FC2 /* LaunchScreen.storyboard in Resources */,
 				E697C3F52366C58A008F9FC2 /* BigArticleCell.xib in Resources */,
 				E697C3B923660FC8008F9FC2 /* Assets.xcassets in Resources */,
@@ -300,6 +313,7 @@
 				E697C3D4236618D3008F9FC2 /* NetworkManager.swift in Sources */,
 				E697C3E223667B25008F9FC2 /* CategoriesVC.swift in Sources */,
 				E697C3EC23669FF5008F9FC2 /* CacheManager.swift in Sources */,
+				E6F876762367903D00D13EDB /* ArticleDetailCell.swift in Sources */,
 				E697C3D0236615A3008F9FC2 /* Source.swift in Sources */,
 				E697C3F42366C58A008F9FC2 /* BigArticleCell.swift in Sources */,
 				E697C3E823669BFB008F9FC2 /* JSView.swift in Sources */,
@@ -309,9 +323,11 @@
 				E697C3DE23663F24008F9FC2 /* ViewModel.swift in Sources */,
 				E697C3DC23662182008F9FC2 /* Decodable.swift in Sources */,
 				E697C3B123660FC6008F9FC2 /* HomeVC.swift in Sources */,
+				E6F8767323678DCE00D13EDB /* DetailVC.swift in Sources */,
 				E697C3AF23660FC6008F9FC2 /* AppDelegate.swift in Sources */,
 				E697C3B723660FC6008F9FC2 /* Flash_Feed.xcdatamodeld in Sources */,
 				E697C3EF2366AE27008F9FC2 /* DateFormatter+Extension.swift in Sources */,
+				E6F8767B2367A69A00D13EDB /* UIView+Extension.swift in Sources */,
 				E697C3D223661686008F9FC2 /* Article.swift in Sources */,
 				E697C3F923671BC2008F9FC2 /* CategoryCell.swift in Sources */,
 				E697C3DA23661CE3008F9FC2 /* Endpoints.swift in Sources */,

@@ -24,10 +24,10 @@ class BigArticleCell: UITableViewCell {
     
     var article: Article! {
         didSet {
-            setTitle(self.article.title)
-            setDescription(self.article.descr ?? "")
-            setDate(self.article.publishedAt)
-            setImage()
+            setTitle(self.article.title, to: articleTitle)
+            setDescription(self.article.descr ?? "", to: articleDescription)
+            setDateFromNowFormat(self.article.publishedAt, to: articleDate)
+            setImage(from: self.article, to: articleImage)
         }
     }
     
@@ -41,7 +41,7 @@ class BigArticleCell: UITableViewCell {
     // MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         setupUI()
     }
     
@@ -49,47 +49,20 @@ class BigArticleCell: UITableViewCell {
     // MARK: - Set Article
     fileprivate func setupUI() {
         
+        // Shadow
         self.layer.shadowOpacity = SHADOW.OPACITY
         self.layer.shadowRadius = SHADOW.RADIUS
         self.layer.shadowOffset = SHADOW.OFFSET
         self.layer.shadowColor = SHADOW.COLOR
     
+        // Background View
         bgView.layer.cornerRadius = CORNER.RADIUS
-    }
-    
-    fileprivate func setTitle(_ title: String) {
         
-        // Remove source name
-        let endIndex = title.lastIndex(of: "-")
-        let text = title[..<endIndex!]
-        
-        articleTitle.text = String(text)
-    }
-    
-    fileprivate func setDescription(_ description: String) {
-        articleDescription.text = description
+        // Labels
+        articleDate.textColor = COLOR.DARK
         articleDescription.textColor = COLOR.DARK
     }
-    
-    fileprivate func setDate(_ publishedDate: String) {
-        
-        // Convert to date type
-        let date = DateFormatter().date(publishedDate)
-        
-        // Get user friendly format
-        articleDate.text = date?.timeAgoDisplay()
-        articleDate.textColor = COLOR.DARK
-    }
-    
-    fileprivate func setImage() {
-        
-        article.getImage { [weak self] (img) in
-            if let image = img {
-                self?.articleImage.image = image
-            }
-        }
-    }
-    
+
     
     // MARK: - Set Category
     fileprivate func setCategory(_ category: String) {

@@ -64,40 +64,6 @@ class ArticleCell: UITableViewCell {
         } else {
             articleCategory.text = "  \(category.uppercased())  "
         }
-        
-        // Set Color
-        if THEME.IS_DARK {
-            articleCategory.textColor = THEME.CURRENT.TINT
-            articleCategory.backgroundColor = THEME.CURRENT.BACKGROUND
-            
-        } else {
-            switch category {
-            case CATEGORY.GENERAL:
-                articleCategory.textColor = CATEGORY.COLOR.GENERAL
-                
-            case CATEGORY.BUSINESS:
-                articleCategory.textColor = CATEGORY.COLOR.BUSINESS
-                
-            case CATEGORY.ENTERTAINMENT:
-                articleCategory.textColor = CATEGORY.COLOR.ENTERTAINMENT
-                
-            case CATEGORY.HEALTH:
-                articleCategory.textColor = CATEGORY.COLOR.HEALTH
-                
-            case CATEGORY.SCIENCE:
-                articleCategory.textColor = CATEGORY.COLOR.SCIENCE
-                
-            case CATEGORY.SPORTS:
-                articleCategory.textColor = CATEGORY.COLOR.SPORTS
-                
-            case CATEGORY.TECH:
-                articleCategory.textColor = CATEGORY.COLOR.TECH
-                
-            default:
-                articleCategory.textColor = UIColor.lightGray
-            }
-            
-        }
     }
     
 }

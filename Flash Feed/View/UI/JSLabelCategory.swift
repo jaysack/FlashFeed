@@ -10,6 +10,7 @@ import UIKit
 
 class JSLabelCategory: UILabel {
     
+    // MARK: - Variable
     override var text: String? {
         didSet {
             setTextColor(for: oldValue!)

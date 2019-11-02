@@ -72,11 +72,12 @@ class HomeVC: UIViewController {
                     self?.currentPageNumber = 1
                     self?.lastTableViewIndex = 0
                     self?.preventFurtherRequests = false
+                    
+                    // Load specific category
+                    self?.currentCategory = userInfo["category"]!
+                    self?.vm.loadArticles(in: COUNTRY.USA, for: userInfo["category"])
                 }
                 
-                // Load specific category
-                self?.currentCategory = userInfo["category"]!
-                self?.vm.loadArticles(in: COUNTRY.USA, for: userInfo["category"])
                 
             }
         }
@@ -116,7 +117,7 @@ extension HomeVC: ViewModelDelegate {
         if currentPageNumber > 1 {
             articlesTableView.scrollToRow(at: IndexPath(row: lastTableViewIndex, section: 0), at: .bottom, animated: false)
         } else {
-            articlesTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            articlesTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
         }
     }
 }

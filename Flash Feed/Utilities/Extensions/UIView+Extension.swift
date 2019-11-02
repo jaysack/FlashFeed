@@ -81,7 +81,11 @@ extension UIView {
     
     
     // Set ImageView
-    func setImage(from article: Article, to imageView: UIImageView) {
+    func setImage(from article: Article, to imageView: JSImageView) {
+        
+        // Reset image
+        #warning("TO-DO: Fix image not showing up when user scrolls fast")
+        imageView.image = nil
         
         article.getImage { (img) in
             if let image = img {

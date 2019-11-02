@@ -10,6 +10,7 @@ import UIKit
 
 class JSImageView: UIImageView {
     
+    // MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
         

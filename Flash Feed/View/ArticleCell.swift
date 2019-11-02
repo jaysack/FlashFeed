@@ -13,7 +13,7 @@ class ArticleCell: UITableViewCell {
     // MARK: - IBOutlets
     // Labels
     @IBOutlet weak var articleTitle: UILabel!
-    @IBOutlet weak var articleImage: UIImageView!
+    @IBOutlet weak var articleImage: JSImageView!
     @IBOutlet weak var articleCategory: JSLabelCategory!
     @IBOutlet weak var articleDate: UILabel!
     

@@ -49,8 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationBarAppearace = UINavigationBar.appearance()
         
         // Setup colors
-        navigationBarAppearace.tintColor = COLOR.NEUTRAL
-        navigationBarAppearace.barTintColor = COLOR.PRIMARY
+        if THEME.IS_DARK {
+            navigationBarAppearace.setBackgroundImage(UIImage(), for: .default)
+            navigationBarAppearace.shadowImage = UIImage()
+        }
+        
+        navigationBarAppearace.tintColor = THEME.CURRENT.BACKGROUND
+        navigationBarAppearace.barTintColor = THEME.CURRENT.ACCENT
         
         // Setup font
         guard let font = UIFont(name: "HiraMinProN-W6", size: 24) else { return }

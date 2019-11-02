@@ -136,11 +136,13 @@ There’s little reason to believe Son, Claure and Fisher can use their Sprint p
             <size key="customSize" width="376" height="720"/>
             <connections>
                 <outlet property="articleAuthor" destination="tMW-SB-NHN" id="TWT-04-ffW"/>
+                <outlet property="articleAuthorSpan" destination="AvB-bE-sn3" id="nbR-mC-uCC"/>
                 <outlet property="articleContent" destination="vwe-bu-fC8" id="SPf-YM-mFA"/>
                 <outlet property="articleDate" destination="1S2-65-Aoq" id="Qhf-U4-GPS"/>
                 <outlet property="articleDescription" destination="WCM-Sw-3cQ" id="Dfi-YN-aJ7"/>
                 <outlet property="articleImage" destination="UCe-xg-tzO" id="BO0-LT-JpD"/>
                 <outlet property="articleTitle" destination="EN5-fD-1e0" id="U5p-bG-8a0"/>
+                <outlet property="bgView" destination="EeD-wg-dE4" id="0SO-25-qHM"/>
                 <outlet property="lineDivider" destination="hnQ-Nt-VXU" id="eMZ-8S-yi6"/>
             </connections>
             <point key="canvasLocation" x="221.73913043478262" y="12.723214285714285"/>

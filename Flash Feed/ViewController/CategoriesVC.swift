@@ -32,6 +32,11 @@ class CategoriesVC: UIViewController {
         
         // Select first category
         categoryCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .left)
+        applyTheme()
+    }
+    
+    fileprivate func applyTheme() {
+        categoryCollectionView.backgroundColor = THEME.CURRENT.BACKGROUND
     }
 }
 

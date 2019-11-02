@@ -73,9 +73,9 @@ struct SHADOW {
 
 
 struct COLOR {
-    static let PRIMARY = UIColor(red: 255/255, green: 107/255, blue: 107/255, alpha: 1)
-    static let NEUTRAL = UIColor(red: 200/255, green: 214/255, blue: 229/255, alpha: 1)
-    static let DARK = UIColor(red: 34/255, green: 47/255, blue: 62/255, alpha: 1)
+    
+    static let RED = UIColor(red: 255/255, green: 107/255, blue: 107/255, alpha: 1)
+    static let WHITE = UIColor.white
+    static let DARK_BLUE = UIColor(red: 34/255, green: 47/255, blue: 62/255, alpha: 1)
+    static let GRAY = UIColor.lightGray
 }
-
-

@@ -109,6 +109,7 @@
                 <outlet property="articleImage" destination="ozh-Qk-LeZ" id="7id-Hw-ypj"/>
                 <outlet property="articleTitle" destination="3Gk-hW-vRs" id="hbC-bQ-M32"/>
                 <outlet property="bgView" destination="N83-DH-Jm5" id="KkO-1U-lQS"/>
+                <outlet property="categoryLine" destination="q5p-fy-KFd" id="FY5-6e-Zvy"/>
             </connections>
             <point key="canvasLocation" x="148.55072463768118" y="103.79464285714285"/>
         </tableViewCell>

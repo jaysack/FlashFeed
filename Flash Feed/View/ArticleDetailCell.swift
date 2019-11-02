@@ -13,12 +13,14 @@ class ArticleDetailCell: UICollectionViewCell {
     // MARK: - IBOutlets
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleAuthor: UILabel!
+    @IBOutlet weak var articleAuthorSpan: UILabel!
     @IBOutlet weak var articleImage: UIImageView!
     @IBOutlet weak var articleDate: UILabel!
     @IBOutlet weak var articleDescription: UILabel!
     @IBOutlet weak var articleContent: UILabel!
     
     @IBOutlet weak var lineDivider: UIView!
+    @IBOutlet weak var bgView: UIView!
     
     
     // MARK: - Variables
@@ -29,9 +31,37 @@ class ArticleDetailCell: UICollectionViewCell {
             setAuthor(self.article.author, to: articleAuthor)
             setContent(self.article.content, to: articleContent)
             setDate(self.article.publishedAt, to: articleDate)
-            setImage(from: self.article, to: articleImage)
             setDescription(self.article.descr, to: articleDescription)
+            setImage(from: self.article, to: articleImage)
         }
+    }
+    
+    
+    // MARK: - Awake From Nib
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        applyTheme()
+    }
+    
+    
+    // MARK: - Private Function(s)
+    fileprivate func applyTheme() {
+        
+        // Background
+        bgView.backgroundColor = THEME.CURRENT.BACKGROUND
+        
+        // Labels
+        articleTitle.textColor = THEME.CURRENT.ARTICLE_TITLE
+        articleAuthorSpan.textColor = THEME.CURRENT.ARTICLE_TEXT
+        articleAuthor.textColor = THEME.CURRENT.ARTICLE_TEXT
+        articleDescription.textColor = THEME.CURRENT.ARTICLE_DESCRIPTION
+        articleDate.textColor = THEME.CURRENT.ARTICLE_TEXT
+        articleContent.textColor = THEME.CURRENT.ARTICLE_TEXT
+        
+        // UI Elements
+        lineDivider.backgroundColor = THEME.CURRENT.ARTICLE_ACCENT
+        
     }
     
     

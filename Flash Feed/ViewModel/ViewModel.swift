@@ -10,6 +10,7 @@ import Foundation
 
 protocol ViewModelDelegate {
     func update()
+    var preventFurtherRequests: Bool { get set }
 }
 
 class ViewModel {
@@ -50,12 +51,26 @@ class ViewModel {
     func loadArticles(in country: String, for category: String? = nil) {
         NM.fetchArticles(in: country, for: category) { [weak self] (articles) in
             // Update container array
+            guard let articles = articles else { return }
             self?.articles = articles
         }
     }
     
     func loadNextBatch(in country: String, of currentCategory: String, for pageNumber: Int) {
         NM.fetchArticles(in: country, for: currentCategory, page: pageNumber) { [weak self] (articles) in
+            
+            // Block further request if needed
+            guard let articles = articles else {
+                self?.delegate?.preventFurtherRequests = true
+                return
+            }
+            
+            // Block further requests if no more article available on server
+            if articles.count < 20 {
+                self?.delegate?.preventFurtherRequests = true
+                print("Fetched last available article in category: \(currentCategory.capitalized)")
+            }
+            
             // Append to container array
             self?.articles += articles
         }

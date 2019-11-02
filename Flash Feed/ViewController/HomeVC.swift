@@ -20,6 +20,7 @@ class HomeVC: UIViewController {
     var currentPageNumber: Int = 1
     var lastTableViewIndex: Int = 0
     var fetchingMore: Bool = false
+    var preventFurtherRequests: Bool = false
     
     
     // MARK: - Lifecycle Methods
@@ -30,6 +31,7 @@ class HomeVC: UIViewController {
         registerCustomCells()
         registerNotification()
         setNavigationTitle(with: "FlashFeed")
+        applyTheme()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +40,10 @@ class HomeVC: UIViewController {
 
     
     // MARK: - Functions
+    fileprivate func applyTheme() {
+        self.view.backgroundColor = THEME.CURRENT.BACKGROUND
+    }
+    
     fileprivate func setupViewModel() {
         vm.loadSources(in: LANGUAGE.ENGLISH)
         vm.loadArticles(in: COUNTRY.USA)
@@ -62,8 +68,10 @@ class HomeVC: UIViewController {
                 
                 // Reset number of pages to load (only if new categry selected)
                 if self?.currentCategory != userInfo["category"] {
+                    
                     self?.currentPageNumber = 1
-                    self?.lastTableViewIndex = 1
+                    self?.lastTableViewIndex = 0
+                    self?.preventFurtherRequests = false
                 }
                 
                 // Load specific category
@@ -116,6 +124,7 @@ extension HomeVC: ViewModelDelegate {
 
 // MARK: - Table View Extension
 extension HomeVC: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vm.articles.count
     }
@@ -145,8 +154,11 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCell.identifier, for: indexPath) as! ArticleCell
+            
+            // Config. cell
             cell.article = article
             
+            // Config. category
             if currentCategory == CATEGORY.GENERAL {
                 cell.category = vm.getCategory(of: article)
             } else {
@@ -183,18 +195,22 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         
         if offsetY > contentHeight - scrollView.frame.height {
             
-            if !fetchingMore {
+            if !fetchingMore && !preventFurtherRequests {
                 
-                // Allow API requests
-                beginBatchFetch()
-                
-                // Load next batch
-                currentPageNumber += 1
-                vm.loadNextBatch(in: COUNTRY.USA, of: currentCategory, for: currentPageNumber)
-
-                // Stop further requests
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-                    self?.stopBatchFetch()
+                // Only load next batch if some articles already displayed
+                if lastTableViewIndex > 0 {
+                    
+                    // Allow API requests
+                    beginBatchFetch()
+                    
+                    // Load next batch
+                    currentPageNumber += 1
+                    vm.loadNextBatch(in: COUNTRY.USA, of: currentCategory, for: currentPageNumber)
+                    
+                    // Stop further requests
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                        self?.stopBatchFetch()
+                    }
                 }
             }
         }

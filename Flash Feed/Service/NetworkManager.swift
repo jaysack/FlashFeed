@@ -56,10 +56,10 @@ final class NetworkManager {
     
     
     // MARK: - Fetch Articles
-    func fetchArticles(in country: String, for category: String? = nil, page pageNumber: Int = 1, completion: @escaping ([Article]) -> Void) {
+    func fetchArticles(in country: String, for category: String? = nil, page pageNumber: Int = 1, completion: @escaping ([Article]?) -> Void) {
         
         var endpoint = "\(ENDPOINT.HEADLINES.BASE)?sortBy=latest&country=\(country)&page=\(pageNumber)&pageSize=\(20)"
-
+        
         // Add category (only if needed)
         if let category = category {
             endpoint += "&category=\(category)"
@@ -90,9 +90,19 @@ final class NetworkManager {
             // Decode JSON
             do {
                 let response = try JSONDecoder().decode(ArticleResponse.self, from: data)
-                completion(response.articles)
+                
+                // Handle server-side error (if any)
+                if response.status == "error" {
+                    print("Server Side Error: \(response.message!)")
+                    completion(nil)
+                    
+                } else {
+                    completion(response.articles!)
+                }
+                
             } catch {
                 print("JSError: Unable to decode data ~> \(error.localizedDescription)")
+                print(request)
             }
         }).resume()
     }

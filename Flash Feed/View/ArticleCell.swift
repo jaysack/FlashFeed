@@ -11,10 +11,15 @@ import UIKit
 class ArticleCell: UITableViewCell {
     
     // MARK: - IBOutlets
+    // Labels
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleImage: UIImageView!
-    @IBOutlet weak var articleCategory: UILabel!
+    @IBOutlet weak var articleCategory: JSLabelCategory!
     @IBOutlet weak var articleDate: UILabel!
+    
+    // UI Element(s)
+    @IBOutlet weak var categoryLine: UIView!
+    @IBOutlet weak var bgView: UIView!
     
     
     // MARK: - Variables
@@ -38,10 +43,19 @@ class ArticleCell: UITableViewCell {
     // MARK: - Awake From Nib
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        applyTheme()
     }
 
     
     // MARK: - Set Category
+    fileprivate func applyTheme() {
+        categoryLine.backgroundColor = THEME.CURRENT.TINT
+        bgView.backgroundColor = THEME.CURRENT.BACKGROUND
+        articleTitle.textColor = THEME.CURRENT.CARD_TITLE
+        articleDate.textColor = THEME.CURRENT.CARD_LABEL
+    }
+    
     fileprivate func setCategory(_ category: String) {
 
         // Set Label
@@ -52,30 +66,37 @@ class ArticleCell: UITableViewCell {
         }
         
         // Set Color
-        switch category {
-        case CATEGORY.GENERAL:
-            articleCategory.textColor = CATEGORY.COLOR.GENERAL
+        if THEME.IS_DARK {
+            articleCategory.textColor = THEME.CURRENT.TINT
+            articleCategory.backgroundColor = THEME.CURRENT.BACKGROUND
             
-        case CATEGORY.BUSINESS:
-            articleCategory.textColor = CATEGORY.COLOR.BUSINESS
+        } else {
+            switch category {
+            case CATEGORY.GENERAL:
+                articleCategory.textColor = CATEGORY.COLOR.GENERAL
+                
+            case CATEGORY.BUSINESS:
+                articleCategory.textColor = CATEGORY.COLOR.BUSINESS
+                
+            case CATEGORY.ENTERTAINMENT:
+                articleCategory.textColor = CATEGORY.COLOR.ENTERTAINMENT
+                
+            case CATEGORY.HEALTH:
+                articleCategory.textColor = CATEGORY.COLOR.HEALTH
+                
+            case CATEGORY.SCIENCE:
+                articleCategory.textColor = CATEGORY.COLOR.SCIENCE
+                
+            case CATEGORY.SPORTS:
+                articleCategory.textColor = CATEGORY.COLOR.SPORTS
+                
+            case CATEGORY.TECH:
+                articleCategory.textColor = CATEGORY.COLOR.TECH
+                
+            default:
+                articleCategory.textColor = UIColor.lightGray
+            }
             
-        case CATEGORY.ENTERTAINMENT:
-            articleCategory.textColor = CATEGORY.COLOR.ENTERTAINMENT
-            
-        case CATEGORY.HEALTH:
-            articleCategory.textColor = CATEGORY.COLOR.HEALTH
-            
-        case CATEGORY.SCIENCE:
-            articleCategory.textColor = CATEGORY.COLOR.SCIENCE
-            
-        case CATEGORY.SPORTS:
-            articleCategory.textColor = CATEGORY.COLOR.SPORTS
-            
-        case CATEGORY.TECH:
-            articleCategory.textColor = CATEGORY.COLOR.TECH
-            
-        default:
-            articleCategory.textColor = UIColor.lightGray
         }
     }
     

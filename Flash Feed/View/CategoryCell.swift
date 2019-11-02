@@ -38,13 +38,13 @@ class CategoryCell: UICollectionViewCell {
         
         // Setup UI
         setCellState()
-        cellLip.backgroundColor = COLOR.PRIMARY
+        cellLip.backgroundColor = THEME.CURRENT.CATEGORY_LIP
     }
     
     
     // MARK: - Function(s)
     fileprivate func setCellState() {
-        categoryTitle.textColor = isSelected ? COLOR.PRIMARY : COLOR.DARK
+        categoryTitle.textColor = isSelected ? THEME.CURRENT.CATEGORY_TITLE_SELECTED : THEME.CURRENT.CATEGORY_TITLE
         cellLip.alpha = isSelected ? 1 : 0.15
     }
 

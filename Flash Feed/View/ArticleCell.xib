@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="1" id="wLS-yI-IZv"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  BUSINESS  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-TQ-SV2" userLabel="Category">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  BUSINESS  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-TQ-SV2" userLabel="Category" customClass="JSLabelCategory" customModule="Flash_Feed" customModuleProvider="target">
                                 <rect key="frame" x="20" y="7.5" width="79.5" height="16"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
@@ -95,6 +95,8 @@
                 <outlet property="articleDate" destination="2Ry-pH-7xd" id="qEc-uF-QEw"/>
                 <outlet property="articleImage" destination="UA9-EH-tLT" id="xN6-LG-VSU"/>
                 <outlet property="articleTitle" destination="1RV-QH-e3c" id="vaD-vd-JA7"/>
+                <outlet property="bgView" destination="naj-Bb-mAl" id="ye9-D3-kee"/>
+                <outlet property="categoryLine" destination="VHE-K4-bou" id="YeA-hr-8xA"/>
             </connections>
             <point key="canvasLocation" x="206.52173913043481" y="102.12053571428571"/>
         </tableViewCell>

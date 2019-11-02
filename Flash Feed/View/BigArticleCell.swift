@@ -11,12 +11,16 @@ import UIKit
 class BigArticleCell: UITableViewCell {
 
     // MARK: - IBOutlets
+    // UILabels
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleDescription: UILabel!
     @IBOutlet weak var articleImage: JSImageView!
     @IBOutlet weak var articleCategory: UILabel!
     @IBOutlet weak var articleDate: UILabel!
     @IBOutlet weak var bgView: UIView!
+    
+    // UI Elements
+    @IBOutlet weak var categoryLine: UIView!
     
     
     // MARK: - Variables
@@ -43,24 +47,34 @@ class BigArticleCell: UITableViewCell {
         super.awakeFromNib()
 
         setupUI()
+        applyTheme()
     }
     
     
     // MARK: - Set Article
     fileprivate func setupUI() {
-        
-        // Shadow
+
         self.layer.shadowOpacity = SHADOW.OPACITY
         self.layer.shadowRadius = SHADOW.RADIUS
         self.layer.shadowOffset = SHADOW.OFFSET
         self.layer.shadowColor = SHADOW.COLOR
-    
-        // Background View
         bgView.layer.cornerRadius = CORNER.RADIUS
+    }
+    
+    fileprivate func applyTheme() {
+        
+        // Background
+        bgView.backgroundColor = THEME.CURRENT.CARD_COLOR
         
         // Labels
-        articleDate.textColor = COLOR.DARK
-        articleDescription.textColor = COLOR.DARK
+        articleTitle.textColor = THEME.CURRENT.CARD_TITLE
+        articleDescription.textColor = THEME.CURRENT.CARD_DESCRIPTION
+        articleDate.textColor = THEME.CURRENT.CARD_BIG_LABEL
+        articleCategory.textColor = THEME.CURRENT.CARD_BIG_CATEGORY_LABEL
+        articleCategory.backgroundColor = THEME.CURRENT.CARD_COLOR
+        
+        // UI Element(s)
+        categoryLine.backgroundColor = THEME.CURRENT.CARD_TITLE
     }
 
     
@@ -73,8 +87,6 @@ class BigArticleCell: UITableViewCell {
         } else {
             articleCategory.text = "  \(category.uppercased())  "
         }
-
-        articleCategory.textColor = UIColor.white
     }
     
 }

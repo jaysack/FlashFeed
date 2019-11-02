@@ -19,6 +19,8 @@ struct SourceResponse: Decodable {
 struct ArticleResponse: Decodable {
     
     let status: String
-    let totalResults: Int
-    let articles: [Article]
+    let code: String?
+    let totalResults: Int?
+    let articles: [Article]?
+    let message: String?
 }
